@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obersever Design Pattern</title>
+</head>
+<body>
+    <pre class="oberver-event-manager-out"></pre>
+    <script src="../src/Behavioral/Observer/EventManager.ts"></script>
+    
+<pre style="background: #333333;color: #e2e2e2;">
+
+    em.on('open', (data) => {
+        const out = document.querySelector('.oberver-event-manager-out');
+    
+        document.body.style.backgroundColor = 'purple';
+    
+        if (out) {
+            out.innerHTML += data;
+        }
+    });
+    em.on('close', (data) => {
+        const out = document.querySelector('.oberver-event-manager-out');
+    
+        document.body.style.backgroundColor = 'darkgray';
+    
+        if (out) {
+            out.innerHTML += '\n' + data;
+        }
+    });
+    
+    setTimeout(() => {
+        em.emit('open', 'open event triggered');
+    }, 1000);
+    
+    setTimeout(() => {
+        em.emit('close', 'close event triggered');
+    }, 2000);
+    
+</pre>
+</body>
+</html>
