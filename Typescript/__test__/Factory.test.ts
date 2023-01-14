@@ -1,4 +1,4 @@
-import { Circle, Rectangle, ShapeFactory, shapeType, Square } from '../src/Factory';
+import { Circle, Rectangle, ShapeFactory, shapeType, Square } from '../src/Creational/Factory';
 
 describe('Factory', () => {
     it('should belong to the concrete classes of the drawing methods and instance.', () => {

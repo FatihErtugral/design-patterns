@@ -1,4 +1,4 @@
-import { throttle } from '../src/Thorottle';
+import { throttle } from '../src/other/Thorottle';
 
 describe('throttle', () => {
     beforeEach(() => {

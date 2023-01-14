@@ -1,4 +1,4 @@
-import { debounce } from '../src/Debounce';
+import { debounce } from '../src/other/Debounce';
 
 describe('debounce', () => {
     beforeEach(() => {
