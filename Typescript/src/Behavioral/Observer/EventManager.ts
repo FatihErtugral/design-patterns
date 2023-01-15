@@ -1,6 +1,6 @@
 interface EventType {
     'open': (...args: any[]) => void
-    'close': (...args: any[]) => void
+    'close': (...args: any[]) => void 
 }
 
 class EventManager {
@@ -59,7 +59,7 @@ const unsubscribeTest = () => {
 
 eventManager.on('open', unsubscribeTest);
 eventManager.emit('open', 'open event triggered');
-eventManager.off('close', unsubscribeTest);
+eventManager.off('open', unsubscribeTest);
 
 setTimeout(() => {
     eventManager.emit('open', 'open event triggered');
@@ -68,5 +68,3 @@ setTimeout(() => {
 setTimeout(() => {
     eventManager.emit('close', 'close event triggered');
 }, 2000);
-
-

@@ -12,6 +12,6 @@ export default class PasteCommand extends Command {
         this.editor.removeAllRanges();
         this.editor.replaceSelection(this.app.clipboard);
 
-        return true
+        return true;
     }
 }
