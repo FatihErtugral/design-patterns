@@ -17,7 +17,7 @@ const smartProxy: { [key: string]: any } = new Proxy(data, {
         if (hasOwn && target[prop as keyof typeof data] === newValue) {
             $displaySmart.innerHTML += '\nsame value sent';
 
-            return false;
+            return true;
         }
 
         if (hasOwn) {
